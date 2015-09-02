@@ -1,0 +1,20 @@
+<h1>esto es el formulario</h1>
+<% for error in @content.errors.full_messages %>
+  <%= error.messages %>
+<% end %>
+<%= form_for @content do |f| %>
+<p>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</p>
+<p>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+</p>
+<p><%= f.label :order %>
+<%= f.number_field :order %></p>
+
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
